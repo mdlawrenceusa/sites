@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @movie.title %>
+</p>
+
+<p>
+  <strong>Cast:</strong>
+  <%= @movie.cast %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @movie.summary %>
+</p>
+
+<p>
+  <strong>Movieurl:</strong>
+  <%= @movie.movieUrl %>
+</p>
+
+<p>
+  <strong>Posterurl:</strong>
+  <%= @movie.posterUrl %>
+</p>
+<div class="responsive-embed">
+<video  controls>
+  <source src="<%= @movie.movieUrl %>" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+</div>
+
+
+
+<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Back', movies_path %>
